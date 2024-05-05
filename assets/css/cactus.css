@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-90vw);
+    }
+}
+
+.cactus {
+    margin: 10vw;
+    animation: slideLeft 3s ease-in-out infinite;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    /* position: absolute; */
+}
