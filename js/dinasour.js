@@ -2,7 +2,7 @@ const dinosaur = {
   position: [0],
   dinosaur: document.querySelector("#dinosaur"),
   move: function () {
-    this.dinosaur.setAttribute("src", `./assets/dinasour-jump.PNG`);
+    this.dinosaur.setAttribute("src", `./assets/dinosaur-v2.png`);
     setTimeout(() => {
       this.dinosaur.setAttribute("src", `./assets/dinasour.png`);
     }, 1000);
@@ -13,20 +13,20 @@ const dinosaur = {
     }, 200);
     setTimeout(() => {
       this.dinosaur.classList.remove("jump");
-    }, 1000);
+    }, 800);
   },
-  isLive: () => {},
 };
 
-while (true) {
-  dinosaur.move();
-  document.addEventListener("click", function () {
+document.addEventListener("click", function () {
+  dinosaur.jump();
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === " ") {
     dinosaur.jump();
-  });
-  document.addEventListener("keydown", function (event) {
-    if (event.key === " ") {
-      dinosaur.jump();
-    }
-  });
-  dinosaur.isLive();
-}
+  }
+});
+
+setInterval(() => {
+  dinosaur.move();
+}, 2000);

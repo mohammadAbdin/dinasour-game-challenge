@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#dinosaur {
+  position: absolute;
+  left: 100px;
+}
