@@ -8,11 +8,14 @@
   }
 }
 
-.cactus {
-  margin: 10vw;
+#cactus {
+  /* margin: 10vw; */
+  top: 170px;
+
   animation: slideLeft 3s ease-in-out infinite;
   display: flex;
   flex-direction: row;
   align-items: end;
-  /* position: absolute; */
+  position: absolute;
+  z-index: 100;
 }

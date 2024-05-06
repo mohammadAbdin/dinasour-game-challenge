@@ -1,17 +1,40 @@
 body {
   display: flex;
   justify-content: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .container {
-  position: relative;
+  /* position: relative;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 100%; */
 }
 
 #dinosaur {
   position: absolute;
+  top: 170px;
+  align-items: center;
   left: 100px;
+  width: 70px;
+  /* height: 50px; */
+}
+
+.jump {
+  animation: jumpAnimation 1.5s ease-in-out;
+}
+
+@keyframes jumpAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-180px);
+    /* Adjust the jump height as needed */
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }

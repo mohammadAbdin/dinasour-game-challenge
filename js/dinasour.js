@@ -2,18 +2,19 @@ const dinosaur = {
   position: [0],
   dinosaur: document.querySelector("#dinosaur"),
   move: function () {
-    this.dinosaur.setAttribute("src", `./assets/dinosaur-v2.png`);
+    // this.dinosaur.setAttribute("src", `./assets/dinosaur-v2.png`);
     setTimeout(() => {
       this.dinosaur.setAttribute("src", `./assets/dinasour.png`);
     }, 1000);
   },
   jump: function () {
-    setTimeout(() => {
-      this.dinosaur.classList.add("jump");
-    }, 200);
+    dinosaur.dinosaur.setAttribute("src", `./assets/dinosaur-v2.png`);
+    this.dinosaur.classList.add("jump");
+
     setTimeout(() => {
       this.dinosaur.classList.remove("jump");
-    }, 800);
+      this.dinosaur.setAttribute("src", `./assets/dinasour.png`);
+    }, 1500);
   },
 };
 
@@ -27,6 +28,6 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-setInterval(() => {
-  dinosaur.move();
-}, 2000);
+// setInterval(() => {
+//   dinosaur.move();
+// }, 2000);
